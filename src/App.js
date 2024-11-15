@@ -31,12 +31,13 @@ function App() {
 
   const AddUser = (e) => {
     e.preventDefault();
-    setIsLoading(true)
+   
 
     if (!id || !name) {
       alert("please Enter both ID and Name");
       return;
     }
+     setIsLoading(true)
 
     Axios.post('http://localhost:3001/users', {
       id, name
